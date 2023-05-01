@@ -7,8 +7,9 @@ pluginManagement {
 
         kotlin("jvm") version kotlinVersion apply false
         id("io.ktor.plugin") version ktorVersion apply false
+        id("org.jetbrains.kotlin.plugin.serialization") version kotlinVersion apply false
     }
 }
 
-include("climb_stats_backend_ktor")
+include("climb_stats_ktor")
 
