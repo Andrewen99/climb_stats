@@ -1,6 +1,6 @@
-package andrewbrody.ru.plugins
+package ru.andrewbrody.plugins
 
-import andrewbrody.ru.service.TestService
+import ru.andrewbrody.service.TestService
 import io.ktor.server.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.application.*

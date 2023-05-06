@@ -1,7 +1,9 @@
-package andrewbrody.ru
+package ru.andrewbrody
 
 import io.ktor.server.application.*
-import andrewbrody.ru.plugins.*
+import ru.andrewbrody.plugins.configureKoin
+import ru.andrewbrody.plugins.configureRouting
+import ru.andrewbrody.plugins.configureSerialization
 
 fun main(args: Array<String>): Unit =
     io.ktor.server.cio.EngineMain.main(args)

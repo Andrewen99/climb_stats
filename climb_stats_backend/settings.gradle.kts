@@ -12,4 +12,5 @@ pluginManagement {
 }
 
 include("climb_stats_ktor")
-
+include("climb_stats_common")
+include("climb_stats_repo_inmemory")

@@ -1,4 +1,4 @@
-package andrewbrody.ru.service
+package ru.andrewbrody.service
 
 class TestServiceImpl : TestService {
     override fun testFun(): String {

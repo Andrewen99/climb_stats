@@ -1,6 +1,6 @@
-package andrewbrody.ru.plugins
+package ru.andrewbrody.plugins
 
-import andrewbrody.ru.di.appModule
+import ru.andrewbrody.di.appModule
 import io.ktor.server.application.*
 import org.koin.core.logger.Level
 import org.koin.ktor.plugin.Koin
