@@ -12,6 +12,5 @@ data class StrengthTraining(
     val user: User,
     val date: String, //date format dd.mm.yyyy
     val circles: Int = 1,
-    val lock: String?,
     val rest: Int
 )

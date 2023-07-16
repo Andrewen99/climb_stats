@@ -21,7 +21,7 @@ class ClimbRepoInMemory(
             if (id != null) cache.put(id, it)
         }
     }
-    override fun getAll(userId: String): DbRepoResponse<List<Climb>> {
-        return DbRepoResponse(cache.asMap().values.filter { it.user.id != null }.toList())
+    override suspend fun getAll(userId: String): DbRepoResponse<List<Climb>> {
+        return DbRepoResponse(cache.asMap().values.filter { it.user.id == userId }.toList())
     }
 }

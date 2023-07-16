@@ -13,7 +13,7 @@ data class DbRepoResponse<T>(
     val errors: List<ClimbStatsError> = emptyList()
 ) {
 
-    fun toBaseRs(requestId: String) = BaseRs(
+    fun toBaseRs(requestId: String? = null) = BaseRs(
         requestId = requestId,
         data = data,
         success = success,

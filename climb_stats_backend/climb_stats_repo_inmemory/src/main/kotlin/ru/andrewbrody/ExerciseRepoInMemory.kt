@@ -53,9 +53,9 @@ class ExerciseRepoInMemory(
             val exFromDb = cache.get(id)
             when {
                 exFromDb == null -> DbRepoResponse.notFoundResponse("Exercise with id $id wasn't found in db")
-                exFromDb.lock != lock -> DbRepoResponse.concurrencyErrorResponse(ex, lock, exFromDb.lock)
+                exFromDb.lock != lock -> DbRepoResponse.concurrencyErrorResponse(exFromDb, lock, exFromDb.lock)
                 else -> {
-                    val updatedEx = ex.copy(id, newLock)
+                    val updatedEx = ex.copy(id = id, lock = newLock)
                     cache.put(id, updatedEx)
                     DbRepoResponse(updatedEx)
                 }

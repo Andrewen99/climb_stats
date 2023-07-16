@@ -34,6 +34,8 @@ dependencies {
     implementation("io.insert-koin:koin-logger-slf4j:$koinVersion")
     implementation("io.github.reactivecircus.cache4k:cache4k:$cache4kVersion")
     implementation(project(":climb_stats_common"))
+    implementation(project(":climb_stats_repo_inmemory"))
+
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }

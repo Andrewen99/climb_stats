@@ -1,5 +1,6 @@
 package ru.andrewbrody.routes
 
+import dto.ClimbSessionDto
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
@@ -15,6 +16,10 @@ fun Route.climbSessionRoutes() {
         get("/all") {
             val request = call.receive<BaseRq<Nothing>>()
             call.respond(climbSessionService.getAll(request.requestId))
+        }
+        post {
+            val rq = call.receive<BaseRq<ClimbSessionDto>>()
+
         }
     }
 }

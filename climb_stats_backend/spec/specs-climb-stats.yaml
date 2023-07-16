@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: Climb stats service api
+  description: Climb-stats-api
+  version: 1.0.0
+servers:
+  - url: 'http://0.0.0.0:8080'
+
+paths:
+  /climb-routes/all:
+    get:
+      summary: Get all Climbing routes
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+
+
+
+components:
+  schemas:
+
+    ApiResponse:
+      type: object
+      properties:
+        requestId: string

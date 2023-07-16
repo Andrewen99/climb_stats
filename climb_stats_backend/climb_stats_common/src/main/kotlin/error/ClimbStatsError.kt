@@ -14,4 +14,6 @@ data class ClimbStatsError(
     val message: String = "",
     @Transient
     val error: Throwable? = null,
-)
+) {
+    companion object
+}

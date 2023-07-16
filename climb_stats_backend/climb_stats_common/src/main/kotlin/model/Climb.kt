@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Climb(
     val id: String?,
-    val route: Route,
+    val climbRoute: ClimbRoute,
     val user: User,
     val date: String, //date format dd.mm.yyyy
     val sent: Boolean,

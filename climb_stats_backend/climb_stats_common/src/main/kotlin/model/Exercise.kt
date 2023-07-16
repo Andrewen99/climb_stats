@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Exercise (
     val id: String?,
-    val name: String,
+    val exerciseType: ExerciseType,
     val reps: Int,
     val rest: Int, // in seconds
     val addedWeight: Double,

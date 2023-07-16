@@ -51,7 +51,7 @@ class ClimbSessionRepoInMemory(
             val sessionFromDb = cache.get(id)
             when {
                 sessionFromDb == null -> DbRepoResponse.notFoundResponse("Exercise with id $id wasn't found in db")
-                sessionFromDb.lock != lock -> DbRepoResponse.concurrencyErrorResponse(climbSession, lock, sessionFromDb.lock)
+                sessionFromDb.lock != lock -> DbRepoResponse.concurrencyErrorResponse(sessionFromDb, lock, sessionFromDb.lock)
                 else -> {
                     val updatedSession = climbSession.copy(id = id, lock = newLock)
                     cache.put(id, updatedSession)

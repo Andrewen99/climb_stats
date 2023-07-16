@@ -5,6 +5,7 @@ import io.ktor.server.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.application.*
 import org.koin.ktor.ext.inject
+import ru.andrewbrody.routes.climbRoutesRoute
 
 fun Application.configureRouting() {
     val testService by inject<TestService>()
@@ -16,6 +17,6 @@ fun Application.configureRouting() {
         get("/test") {
             call.respondText(testService.testFun())
         }
-
+        climbRoutesRoute()
     }
 }

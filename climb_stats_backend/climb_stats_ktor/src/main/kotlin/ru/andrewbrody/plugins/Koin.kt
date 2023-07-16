@@ -10,7 +10,7 @@ fun Application.configureKoin() {
     install(Koin) {
         slf4jLogger(Level.DEBUG)
         modules(
-            appModule
+            appModule(this@configureKoin)
         )
     }
 }
